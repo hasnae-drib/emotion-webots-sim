@@ -1,0 +1,56 @@
+#VRML_SIM R2022b utf8
+WorldInfo {
+  basicTimeStep 32
+  gravity 9.81
+}
+
+Viewpoint {
+  orientation -0.577, 0.577, 0.577, 2.094
+  position 2.5, 2.5, 2.5
+}
+
+TexturedBackground {
+}
+
+TexturedBackgroundLight {
+}
+
+Robot {
+  translation 0, 0, 0
+  children [
+    Solid {
+      translation 0, 0, 0.5
+      rotation 0, 1, 0, 1.57
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.8, 0.1, 0.1
+            }
+          }
+          geometry Box {
+            size 0.1, 0.1, 0.1
+          }
+        }
+      ]
+    }
+    Servo {
+      name "servo_motor"
+      translation 0, 0, 0.6
+      rotation 0, 1, 0, 0
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.1, 0.1, 0.8
+            }
+          }
+          geometry Cylinder {
+            radius 0.05
+            height 0.2
+          }
+        }
+      ]
+    }
+  ]
+}
